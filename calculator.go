@@ -73,9 +73,7 @@ func calculator(expression string) {
 		if strings.Contains(expression, operations[index]) {
 			splitExpression = strings.Split(expression, operations[index])
 			operation = operations[index]
-		}
-		for i := range splitExpression {
-			splitExpression[i] = strings.TrimSpace(splitExpression[i])
+			break
 		}
 	}
 	if len(splitExpression) != 2 {
